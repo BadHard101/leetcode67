@@ -5,16 +5,10 @@ class Main2 {
         if (a.length() == 0) return b;
         if (b.length() == 0) return a;
 
-        StringBuffer answer = new StringBuffer();
+        StringBuilder answer = new StringBuilder();
 
-        StringBuffer bufferA = new StringBuffer(a);
-        StringBuffer bufferB = new StringBuffer(b);
-
-        Integer indexA = bufferA.length() - 1;
-        Integer indexB = bufferB.length() - 1;
-
-        Character charA;
-        Character charB;
+        Integer indexA = a.length() - 1;
+        Integer indexB = b.length() - 1;
 
         Integer ost = 0;
 
@@ -23,15 +17,15 @@ class Main2 {
 
         while (indexA > -1 || indexB > -1) {
             if (indexA > -1) {
-                charA = bufferA.charAt(indexA);
-                bitA = Integer.parseInt(charA.toString());
+                char charA = a.charAt(indexA);
+                bitA = Integer.parseInt(Character.toString(charA));
             } else {
                 bitA = 0;
             }
 
             if (indexB > -1) {
-                charB = bufferB.charAt(indexB);
-                bitB = Integer.parseInt(charB.toString());
+                char charB = b.charAt(indexB);
+                bitB = Integer.parseInt(Character.toString(charB));
             } else {
                 bitB = 0;
             }
